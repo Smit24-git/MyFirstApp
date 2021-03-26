@@ -15,7 +15,7 @@ myApp.use(express.static(__dirname+"/public"));
 
 myApp.use(bodyParser.urlencoded({extended: true}));
 
-myApp.listen( process.env.PORT | 8080);
+myApp.listen( process.env.PORT || 8080);
 
 myApp.get("/",(req,res)=>{
     res.render("home");
